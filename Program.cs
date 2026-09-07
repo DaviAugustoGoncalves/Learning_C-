@@ -80,7 +80,20 @@ class Program{
         }
     }
     public static void Escola(){
-        Console.WriteLine("Funcionalidade da escola em breve integrada!");
-    }
-    
+        string nome;
+        double n1, n2, n3;
+
+        Console.WriteLine("Digite o nome do aluno: ");
+        nome = Console.ReadLine()!;
+        Console.WriteLine("Digite a primeira nota: ");
+        n1 = double.Parse(Console.ReadLine()!);
+        Console.WriteLine("Digite a segunda nota: ");
+        n2 = double.Parse(Console.ReadLine()!);
+        Console.WriteLine("Digite a terceira nota: ");
+        n3 = double.Parse(Console.ReadLine()!);
+
+        Aluno aluno = new Aluno(nome, n1, n2, n3);
+        
+        aluno.obterSituacao();
+    }  
 }
